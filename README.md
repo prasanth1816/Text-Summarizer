@@ -189,7 +189,6 @@ Example:
 
 GitHub: https://github.com/prasanth1816
 
-LinkedIn: *(Add your LinkedIn URL)*
 
 ---
 
