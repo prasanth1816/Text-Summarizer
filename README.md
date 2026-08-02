@@ -163,12 +163,8 @@ before running the application.
 
 ## 📷 Screenshots
 
-Add screenshots of your application here.
+<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/0355a0d3-22b2-40bb-b599-5b22d628144b" />
 
-Example:
-
-- Home Page
-- Generated Summary
 
 ---
 
