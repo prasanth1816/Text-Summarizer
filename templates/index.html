@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIRE — Dialogue Summarizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="wire-frame">
+
+        <header class="letterhead">
+            <div class="letterhead-top">
+                <h1 class="wordmark">WIRE<span class="dot">.</span></h1>
+                <div class="line-status" id="line-status">
+                    <span class="lamp" id="lamp"></span>
+                    <span id="status-text">CHECKING LINE&hellip;</span>
+                </div>
+            </div>
+            <p class="tagline">Every word costs. Send only what matters.</p>
+        </header>
+
+        <main class="desk">
+            <section class="panel panel-in">
+                <h2 class="panel-label">Message to send</h2>
+                <form id="wire-form">
+                    <textarea
+                        id="dialogue-input"
+                        class="ruled"
+                        placeholder="Paste the conversation here&hellip;"
+                        required
+                    ></textarea>
+                    <div class="panel-foot">
+                        <span id="word-count" class="meta">0 words</span>
+                        <button type="submit" id="send-btn">Send&nbsp;&#9656;</button>
+                    </div>
+                </form>
+
+                <div class="examples">
+                    <span class="examples-label">Quick fill</span>
+                    <button type="button" class="chip" data-sample="trip">Weekend trip</button>
+                    <button type="button" class="chip" data-sample="meeting">Meeting reschedule</button>
+                    <button type="button" class="chip" data-sample="grocery">Grocery run</button>
+                </div>
+            </section>
+
+            <div class="stub" aria-hidden="true"><span>tear&nbsp;here</span></div>
+
+            <section class="panel panel-out">
+                <h2 class="panel-label">Transmission received</h2>
+
+                <div class="receipt" id="receipt">
+                    <div class="stamp" id="stamp">
+                        <span class="stamp-line1">CONDENSED</span>
+                        <span class="stamp-line2" id="stamp-pct">0% SHORTER</span>
+                    </div>
+                    <p id="summary-text" class="teletype placeholder">Your condensed message will print here.</p>
+                    <div class="morse" id="morse" hidden>
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <div class="panel-foot">
+                    <span id="charge" class="meta">charged: &mdash; words</span>
+                    <button type="button" id="copy-btn" class="ghost-btn">Copy</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="letterfoot">
+            <span>T5-small &middot; fine-tuned on SAMSum</span>
+            <span>Sent via FastAPI wire service</span>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
